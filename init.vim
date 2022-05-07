@@ -47,6 +47,11 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+Plug 'ianding1/leetcode.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
+
 Plug 'frazrepo/vim-rainbow'
 Plug 'github/copilot.vim'
 Plug 'stevearc/vim-arduino'
@@ -59,6 +64,11 @@ call plug#end()
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+let g:leetcode_solution_filetype = 'javascript'
+let g:leetcode_browser = 'chrome'
+let g:leetcode_hide_paid_only = 1
+
 
 colorscheme github_dark_default 
 
